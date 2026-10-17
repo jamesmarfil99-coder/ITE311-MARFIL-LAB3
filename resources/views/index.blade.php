@@ -3,41 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Home - ITE311 MARFIL</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: system-ui, -apple-system, sans-serif;
         }
         .header-bar {
-            background-color: #212529; /* Itim / Dark Grey background */
-            color: #ffffff;            /* Puti na text */
-            padding: 12px 20px;
-            font-size: 16px;
+            background-color: #1e2124;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand {
             font-weight: bold;
+            font-size: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+        .nav-links a:hover {
+            opacity: 0.8;
         }
         .content {
-            padding: 20px;
+            padding: 30px 20px;
+        }
+        h1 {
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Bar -->
     <div class="header-bar">
-        ITE311 - MARFIL
+        <div class="brand">ITE311 - MARFIL</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </div>
     </div>
 
-    <!-- Main Content -->
     <div class="content">
-        <p>
-            <a href="/">Home</a> | 
-            <a href="/about">About</a> | 
-            <a href="/contact">Contact</a>
-        </p>
-
-        <h1>Welcome to Homepage</h1>
-        <p>This is the main landing page of our Laravel application.</p>
+        <h1>Welcome to Our Application</h1>
+        <p>This is the home page of our Laravel application.</p>
     </div>
 
 </body>

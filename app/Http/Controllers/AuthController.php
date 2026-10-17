@@ -26,7 +26,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => 'user',
+            'role' => 'student',
         ]);
 
         return redirect('/login')->with('success', 'Registration successful. You may now log in.');
@@ -56,7 +56,15 @@ class AuthController extends Controller
 
     public function dashboard()
     {
-        return view('auth.dashboard');
+        $user = Auth::user();
+        if (!$user) {
+            return redirect('/login');
+        }
+
+        return view('auth.dashboard', [
+            'user' => $user,
+            'role' => $user->role,
+        ]);
     }
 
     public function logout(Request $request)
